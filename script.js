@@ -179,4 +179,10 @@ function virarCard(botao) {
   card.classList.toggle("flip");
 }
 
+function buscarAnimal() {
+  const termo = document.getElementById("busca").value.toLowerCase();
+  const filtrados = animais.filter(a => a.nome.toLowerCase().includes(termo));
+  exibirAnimais(filtrados);
+}
+
 mostrarAnimais();

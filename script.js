@@ -1,10 +1,10 @@
 const animais = [
-  { nome: "Rex", tipo: "cachorro", idade: "2 anos", descricao: "Brincalhão", imagem: "imagens/rex.jpg" },
-  { nome: "Luna", tipo: "cachorro", idade: "1 ano", descricao: "Carinhosa", imagem: "imagens/luna.jpg" },
-  { nome: "Thor", tipo: "cachorro", idade: "3 anos", descricao: "Protetor", imagem: "imagens/thor.jpg" },
-  { nome: "Mia", tipo: "gato", idade: "2 anos", descricao: "Tranquila", imagem: "imagens/mia.jpg" },
-  { nome: "Simba", tipo: "gato", idade: "1 ano", descricao: "Brincalhão", imagem: "imagens/simba.jpg" },
-  { nome: "Nina", tipo: "gato", idade: "4 anos", descricao: "Muito dócil", imagem: "imagens/nina.jpg" }
+  { nome: "Rex", tipo: "cachorro", idade: "2 anos", descricao: "Brincalhão", imagem: "imagens/rex.jpeg" },
+  { nome: "Luna", tipo: "cachorro", idade: "1 ano", descricao: "Carinhosa", imagem: "imagens/luna.jpeg" },
+  { nome: "Thor", tipo: "cachorro", idade: "3 anos", descricao: "Protetor", imagem: "imagens/thor.jpeg" },
+  { nome: "Mia", tipo: "gato", idade: "2 anos", descricao: "Tranquila", imagem: "imagens/mia.jpeg" },
+  { nome: "Simba", tipo: "gato", idade: "1 ano", descricao: "Brincalhão", imagem: "imagens/simba.jpeg" },
+  { nome: "Nina", tipo: "gato", idade: "4 anos", descricao: "Muito dócil", imagem: "imagens/nina.jpeg" }
 ];
 
 const lista = document.getElementById("lista-animais");

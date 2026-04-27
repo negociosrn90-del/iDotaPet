@@ -1,35 +1,37 @@
 const animais = [
-  {
-    nome: "Rex",
-    idade: "2 anos",
-    descricao: "Muito brincalhão",
-    imagem: "https://placedog.net/300/200"
-  },
-  {
-    nome: "Luna",
-    idade: "1 ano",
-    descricao: "Carinhosa e calma",
-    imagem: "https://placedog.net/301/200"
-  }
+  { nome: "Rex", tipo: "cachorro", idade: "2 anos", descricao: "Brincalhão", imagem: "https://placedog.net/300/200?id=1" },
+  { nome: "Luna", tipo: "cachorro", idade: "1 ano", descricao: "Carinhosa", imagem: "https://placedog.net/300/200?id=2" },
+  { nome: "Thor", tipo: "cachorro", idade: "3 anos", descricao: "Protetor", imagem: "https://placedog.net/300/200?id=3" },
+  { nome: "Mia", tipo: "gato", idade: "2 anos", descricao: "Tranquila", imagem: "https://placekitten.com/300/200" },
+  { nome: "Simba", tipo: "gato", idade: "1 ano", descricao: "Brincalhão", imagem: "https://placekitten.com/301/200" },
+  { nome: "Nina", tipo: "gato", idade: "4 anos", descricao: "Muito dócil", imagem: "https://placekitten.com/302/200" }
 ];
 
 const lista = document.getElementById("lista-animais");
 
-animais.forEach(animal => {
-  const card = document.createElement("div");
-  card.className = "card";
+function mostrarAnimais(filtro = "todos") {
+  lista.innerHTML = "";
 
-  card.innerHTML = `
-    <img src="${animal.imagem}" width="100%">
-    <h3>${animal.nome}</h3>
-    <p>${animal.idade}</p>
-    <p>${animal.descricao}</p>
-    <button onclick="adotar('${animal.nome}')">Quero adotar</button>
-  `;
+  animais
+    .filter(a => filtro === "todos" || a.tipo === filtro)
+    .forEach(animal => {
+      const card = document.createElement("div");
+      card.className = "card";
 
-  lista.appendChild(card);
-});
+      card.innerHTML = `
+        <img src="${animal.imagem}" width="100%">
+        <h3>${animal.nome}</h3>
+        <p>${animal.idade}</p>
+        <p>${animal.descricao}</p>
+        <button class="adotar" onclick="adotar('${animal.nome}')">Quero adotar</button>
+      `;
+
+      lista.appendChild(card);
+    });
+}
 
 function adotar(nome) {
   alert(`Você demonstrou interesse em adotar ${nome}!`);
 }
+
+mostrarAnimais();

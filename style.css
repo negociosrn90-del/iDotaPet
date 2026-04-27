@@ -1,33 +1,75 @@
 body {
-  font-family: Arial;
-  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
   text-align: center;
 }
 
 header {
+  background: linear-gradient(135deg, #4CAF50, #2e7d32);
+  color: white;
+  padding: 30px 20px;
+}
+
+header p {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.filtros {
+  margin: 20px;
+}
+
+.filtros button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #ddd;
+  transition: 0.3s;
+}
+
+.filtros button:hover {
   background: #4CAF50;
   color: white;
-  padding: 20px;
 }
 
 #lista-animais {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 10px;
 }
 
 .card {
   background: white;
-  margin: 10px;
+  margin: 15px;
   padding: 15px;
-  border-radius: 10px;
-  width: 200px;
+  border-radius: 15px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
-button {
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  border-radius: 10px;
+}
+
+button.adotar {
   background: #4CAF50;
   color: white;
   border: none;
   padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
   cursor: pointer;
+}
+
+button.adotar:hover {
+  background: #388e3c;
 }
